@@ -1,7 +1,7 @@
 galaxy_info:
-  author: your name
-  description: your description
-  company: your company (optional)
+  author: your Yared Henriquez Blanquicett
+  description: Configuración en ansible
+  company: UTB
 
   # If the issue tracker for your role is not on github, uncomment the
   # next line and provide a value
