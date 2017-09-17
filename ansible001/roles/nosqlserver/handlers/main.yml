@@ -1,2 +1,4 @@
 ---
 # handlers file for nosqlserver
+- name: reiniciar redis nosql
+  service: name=redis-server state=restarted
