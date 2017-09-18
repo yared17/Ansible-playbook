@@ -1,2 +1,3 @@
 ---
-# handlers file for sqlserver
+- name: restart mysql
+  service: name={{ mysql_service }} state=restarted
