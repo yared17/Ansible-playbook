@@ -1,0 +1,6 @@
+---
+- name: Instalación y configuración de un stack para sql
+  hosts: sql
+  remote_user: root
+  roles:
+   - sql
