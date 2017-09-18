@@ -1,6 +1,0 @@
----
-- name: Instalación y configuración de un stack para nsql
-  hosts: nosql
-  remote_user: root
-  roles:
-   - nosql
