@@ -1,2 +1,3 @@
 ---
-# vars file for sqlserver
+env:
+ RUNLEVEL: 1
