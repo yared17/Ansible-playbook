@@ -1,9 +1,14 @@
 ---
-- name: intalación de redis server
-  apt: name=redis-server state=latest update_cache=yes
 
-- name: comprobar si redis esta corriendo
-  service: name=redis-server state=started
+- name: Instalar Redis
+  apt: pkg=redis-server state=latest
+  sudo: true
 
-- name: enable redis-server to survive reboot
-  service: name=redis-server enabled=yes
+- name: Activar Redis
+  service: name=redis-server state=started enabled=yes
+  sudo: true
+
+- name: Configuración del Servidor redis
+  template: src=redis.conf.j2 dest=/etc/redis/redis.conf owner=root group=root mode=0644
+  sudo: true
+  notify: Redis Restart
