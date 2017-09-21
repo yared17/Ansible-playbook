@@ -10,11 +10,7 @@ echo "Dockers eliminados."
 echo
 echo "----------------------"
 echo "Eliminando configuración residual en ssh"
-for i in `seq 1 3`;
-do
-  sed -i '' "/server01/d" $HOME/.ssh/known_hosts
-  #ssh-keyscan -H server0$i -p 222$i >> $HOME/.ssh/known_hosts
-done
+sed -i '' "/server01/d" $HOME/.ssh/known_hosts
 echo "Limpieza lista."
 echo
 echo "----------------------"
